@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Peter Horne-Deus 
+ * MamaJunesChicken.java
+ * This is a buying calculator for a chicken shop
+ * October 4,2018
  */
 
 package MamaJune;
@@ -13,13 +14,14 @@ package MamaJune;
 import java.text.*;
 
 public class MamaJunesChicken extends javax.swing.JFrame {
+    // Globally declared variables...
 
     
     
     public MamaJunesChicken() {
         initComponents();
         
-        sandwichTxtFeild.setText("0");
+        sandwichTxtField.setText("0");
         fingerTxtFeild.setText("0");
         wingsTxtFeild.setText("0");
         stirTxtFeild.setText("0");
@@ -50,7 +52,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         burgerLbl = new javax.swing.JLabel();
         hotLbl = new javax.swing.JLabel();
         hotTxtFeild = new javax.swing.JTextField();
-        sandwichTxtFeild = new javax.swing.JTextField();
+        sandwichTxtField = new javax.swing.JTextField();
         fingerTxtFeild = new javax.swing.JTextField();
         wingsTxtFeild = new javax.swing.JTextField();
         stirTxtFeild = new javax.swing.JTextField();
@@ -119,12 +121,17 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         });
         backingPnl.add(hotTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, 50, -1));
 
-        sandwichTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sandwichTxtFeildActionPerformed(evt);
+        sandwichTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                sandwichTxtFieldMousePressed(evt);
             }
         });
-        backingPnl.add(sandwichTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 50, -1));
+        sandwichTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sandwichTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(sandwichTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 50, -1));
 
         fingerTxtFeild.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,9 +250,9 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_hotTxtFeildActionPerformed
 
-    private void sandwichTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sandwichTxtFeildActionPerformed
+    private void sandwichTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sandwichTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_sandwichTxtFeildActionPerformed
+    }//GEN-LAST:event_sandwichTxtFieldActionPerformed
 
     private void fingerTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fingerTxtFeildActionPerformed
         // TODO add your handling code here:
@@ -292,7 +299,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         final double SAVINGS_OFF = 0.10;
         
         //Giving variables the value of the user input
-        numSandwich = Integer.parseInt(sandwichTxtFeild.getText());
+        numSandwich = Integer.parseInt(sandwichTxtField.getText());
         numFingers = Integer.parseInt(fingerTxtFeild.getText());
         numWings = Integer.parseInt(wingsTxtFeild.getText());
         numStirfry = Integer.parseInt(stirTxtFeild.getText());
@@ -322,7 +329,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         savingsLbl.setText("Savings: " + money.format(saving));
         
         //Reseting program for another use
-        sandwichTxtFeild.setText("0");
+        sandwichTxtField.setText("0");
         fingerTxtFeild.setText("0");
         wingsTxtFeild.setText("0");
         stirTxtFeild.setText("0");
@@ -339,7 +346,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
 
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
         //Reseting program for another use
-        sandwichTxtFeild.setText("0");
+        sandwichTxtField.setText("0");
         fingerTxtFeild.setText("0");
         wingsTxtFeild.setText("0");
         stirTxtFeild.setText("0");
@@ -354,6 +361,10 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         total.setText("Total ");
         savingsLbl.setText("Savings: ");
     }//GEN-LAST:event_resetBtnActionPerformed
+
+    private void sandwichTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sandwichTxtFieldMousePressed
+        sandwichTxtField.setText("");
+    }//GEN-LAST:event_sandwichTxtFieldMousePressed
 
     /**
      * @param args the command line arguments
@@ -409,7 +420,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     private javax.swing.JLabel priceBefore;
     private javax.swing.JButton resetBtn;
     private javax.swing.JLabel sandwichLbl;
-    private javax.swing.JTextField sandwichTxtFeild;
+    private javax.swing.JTextField sandwichTxtField;
     private javax.swing.JLabel savingsLbl;
     private javax.swing.JLabel sloganLbl;
     private javax.swing.JLabel stirLbl;
