@@ -22,13 +22,13 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         initComponents();
         
         sandwichTxtField.setText("0");
-        fingerTxtFeild.setText("0");
-        wingsTxtFeild.setText("0");
-        stirTxtFeild.setText("0");
+        fingerTxtField.setText("0");
+        wingsTxtField.setText("0");
+        stirTxtField.setText("0");
         BBQWingsTxtFeild.setText("0");
-        friesTxtFeild.setText("0");
-        burgerTxtFeild.setText("0");
-        hotTxtFeild.setText("0");
+        friesTxtField.setText("0");
+        burgerTxtField.setText("0");
+        hotTxtField.setText("0");
     }
  
     /**
@@ -51,18 +51,18 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         friLbl = new javax.swing.JLabel();
         burgerLbl = new javax.swing.JLabel();
         hotLbl = new javax.swing.JLabel();
-        hotTxtFeild = new javax.swing.JTextField();
+        hotTxtField = new javax.swing.JTextField();
         sandwichTxtField = new javax.swing.JTextField();
-        fingerTxtFeild = new javax.swing.JTextField();
-        wingsTxtFeild = new javax.swing.JTextField();
-        stirTxtFeild = new javax.swing.JTextField();
+        fingerTxtField = new javax.swing.JTextField();
+        wingsTxtField = new javax.swing.JTextField();
+        stirTxtField = new javax.swing.JTextField();
         BBQWingsTxtFeild = new javax.swing.JTextField();
-        friesTxtFeild = new javax.swing.JTextField();
-        burgerTxtFeild = new javax.swing.JTextField();
+        friesTxtField = new javax.swing.JTextField();
+        burgerTxtField = new javax.swing.JTextField();
         calculateBtn = new javax.swing.JButton();
         priceBefore = new javax.swing.JLabel();
-        tax = new javax.swing.JLabel();
-        total = new javax.swing.JLabel();
+        taxLbl = new javax.swing.JLabel();
+        totalLbl = new javax.swing.JLabel();
         exitBtn = new javax.swing.JButton();
         resetBtn = new javax.swing.JButton();
         instuctionsLbl = new javax.swing.JLabel();
@@ -114,14 +114,32 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         hotLbl.setText("Hot Chicken Wings    $4.00");
         backingPnl.add(hotLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, -1, -1));
 
-        hotTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hotTxtFeildActionPerformed(evt);
+        hotTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                hotTxtFieldFocusLost(evt);
             }
         });
-        backingPnl.add(hotTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, 50, -1));
+        hotTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                hotTxtFieldMousePressed(evt);
+            }
+        });
+        hotTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hotTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(hotTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 220, 50, -1));
 
+        sandwichTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                sandwichTxtFieldFocusLost(evt);
+            }
+        });
         sandwichTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                sandwichTxtFieldMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 sandwichTxtFieldMousePressed(evt);
             }
@@ -133,27 +151,67 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         });
         backingPnl.add(sandwichTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 50, -1));
 
-        fingerTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fingerTxtFeildActionPerformed(evt);
+        fingerTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                fingerTxtFieldFocusLost(evt);
             }
         });
-        backingPnl.add(fingerTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 50, -1));
-
-        wingsTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wingsTxtFeildActionPerformed(evt);
+        fingerTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                fingerTxtFieldMousePressed(evt);
             }
         });
-        backingPnl.add(wingsTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 50, -1));
-
-        stirTxtFeild.addActionListener(new java.awt.event.ActionListener() {
+        fingerTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stirTxtFeildActionPerformed(evt);
+                fingerTxtFieldActionPerformed(evt);
             }
         });
-        backingPnl.add(stirTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 50, -1));
+        backingPnl.add(fingerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 50, -1));
 
+        wingsTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                wingsTxtFieldFocusLost(evt);
+            }
+        });
+        wingsTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                wingsTxtFieldMousePressed(evt);
+            }
+        });
+        wingsTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wingsTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(wingsTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 50, -1));
+
+        stirTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                stirTxtFieldFocusLost(evt);
+            }
+        });
+        stirTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                stirTxtFieldMousePressed(evt);
+            }
+        });
+        stirTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stirTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(stirTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 50, -1));
+
+        BBQWingsTxtFeild.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                BBQWingsTxtFeildFocusLost(evt);
+            }
+        });
+        BBQWingsTxtFeild.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                BBQWingsTxtFeildMousePressed(evt);
+            }
+        });
         BBQWingsTxtFeild.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BBQWingsTxtFeildActionPerformed(evt);
@@ -161,19 +219,39 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         });
         backingPnl.add(BBQWingsTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 50, -1));
 
-        friesTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                friesTxtFeildActionPerformed(evt);
+        friesTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                friesTxtFieldFocusLost(evt);
             }
         });
-        backingPnl.add(friesTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 50, -1));
+        friesTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                friesTxtFieldMousePressed(evt);
+            }
+        });
+        friesTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                friesTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(friesTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 50, -1));
 
-        burgerTxtFeild.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                burgerTxtFeildActionPerformed(evt);
+        burgerTxtField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                burgerTxtFieldFocusLost(evt);
             }
         });
-        backingPnl.add(burgerTxtFeild, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 50, -1));
+        burgerTxtField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                burgerTxtFieldMousePressed(evt);
+            }
+        });
+        burgerTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                burgerTxtFieldActionPerformed(evt);
+            }
+        });
+        backingPnl.add(burgerTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 50, -1));
 
         calculateBtn.setText("Calculate");
         calculateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -187,13 +265,13 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         priceBefore.setText("Price Before Tax:       ");
         backingPnl.add(priceBefore, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 160, -1));
 
-        tax.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tax.setText("Tax:    ");
-        backingPnl.add(tax, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 140, -1));
+        taxLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        taxLbl.setText("Tax:    ");
+        backingPnl.add(taxLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 140, -1));
 
-        total.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        total.setText("Total:       ");
-        backingPnl.add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 120, -1));
+        totalLbl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        totalLbl.setText("Total:       ");
+        backingPnl.add(totalLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 120, -1));
 
         exitBtn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         exitBtn.setText("X");
@@ -246,37 +324,37 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void hotTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotTxtFeildActionPerformed
+    private void hotTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hotTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_hotTxtFeildActionPerformed
+    }//GEN-LAST:event_hotTxtFieldActionPerformed
 
     private void sandwichTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sandwichTxtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sandwichTxtFieldActionPerformed
 
-    private void fingerTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fingerTxtFeildActionPerformed
+    private void fingerTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fingerTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fingerTxtFeildActionPerformed
+    }//GEN-LAST:event_fingerTxtFieldActionPerformed
 
-    private void wingsTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wingsTxtFeildActionPerformed
+    private void wingsTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wingsTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_wingsTxtFeildActionPerformed
+    }//GEN-LAST:event_wingsTxtFieldActionPerformed
 
-    private void stirTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stirTxtFeildActionPerformed
+    private void stirTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stirTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_stirTxtFeildActionPerformed
+    }//GEN-LAST:event_stirTxtFieldActionPerformed
 
     private void BBQWingsTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBQWingsTxtFeildActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BBQWingsTxtFeildActionPerformed
 
-    private void friesTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friesTxtFeildActionPerformed
+    private void friesTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_friesTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_friesTxtFeildActionPerformed
+    }//GEN-LAST:event_friesTxtFieldActionPerformed
 
-    private void burgerTxtFeildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerTxtFeildActionPerformed
+    private void burgerTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_burgerTxtFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_burgerTxtFeildActionPerformed
+    }//GEN-LAST:event_burgerTxtFieldActionPerformed
 
     private void calculateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateBtnActionPerformed
         //Creating a decimal format
@@ -300,13 +378,13 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         
         //Giving variables the value of the user input
         numSandwich = Integer.parseInt(sandwichTxtField.getText());
-        numFingers = Integer.parseInt(fingerTxtFeild.getText());
-        numWings = Integer.parseInt(wingsTxtFeild.getText());
-        numStirfry = Integer.parseInt(stirTxtFeild.getText());
+        numFingers = Integer.parseInt(fingerTxtField.getText());
+        numWings = Integer.parseInt(wingsTxtField.getText());
+        numStirfry = Integer.parseInt(stirTxtField.getText());
         numBBQ = Integer.parseInt(BBQWingsTxtFeild.getText());
-        numFries = Integer.parseInt(friesTxtFeild.getText());
-        numBurgers = Integer.parseInt(burgerTxtFeild.getText());
-        numHot = Integer.parseInt(hotTxtFeild.getText());
+        numFries = Integer.parseInt(friesTxtField.getText());
+        numBurgers = Integer.parseInt(burgerTxtField.getText());
+        numHot = Integer.parseInt(hotTxtField.getText());
         
         //Alugerithem to calculate different levels of the cost
         before = (SANDWICH_PRICE*numSandwich) + (FINGERS_PRICE*numFingers ) + (WINGS_PRICE*numWings) + (STIRFRY_PRICE*numStirfry) + (BBQ_PRICE*numBBQ) + (FRIES_PRICE*numFries) + (BURGER_PRICE*numBurgers) + (HOT_PRICE*numHot);
@@ -323,20 +401,20 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         }
         
         //Output of costs
-        tax.setText("Tax: " + money.format(withTax));
+        taxLbl.setText("Tax: " + money.format(withTax));
         priceBefore.setText("Price Before Tax: " + money.format(before));
-        total.setText("Total " + money.format(cost));
+        totalLbl.setText("Total " + money.format(cost));
         savingsLbl.setText("Savings: " + money.format(saving));
         
         //Reseting program for another use
         sandwichTxtField.setText("0");
-        fingerTxtFeild.setText("0");
-        wingsTxtFeild.setText("0");
-        stirTxtFeild.setText("0");
+        fingerTxtField.setText("0");
+        wingsTxtField.setText("0");
+        stirTxtField.setText("0");
         BBQWingsTxtFeild.setText("0");
-        friesTxtFeild.setText("0");
-        burgerTxtFeild.setText("0");
-        hotTxtFeild.setText("0");
+        friesTxtField.setText("0");
+        burgerTxtField.setText("0");
+        hotTxtField.setText("0");
         
     }//GEN-LAST:event_calculateBtnActionPerformed
 
@@ -347,24 +425,88 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     private void resetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetBtnActionPerformed
         //Reseting program for another use
         sandwichTxtField.setText("0");
-        fingerTxtFeild.setText("0");
-        wingsTxtFeild.setText("0");
-        stirTxtFeild.setText("0");
+        fingerTxtField.setText("0");
+        wingsTxtField.setText("0");
+        stirTxtField.setText("0");
         BBQWingsTxtFeild.setText("0");
-        friesTxtFeild.setText("0");
-        burgerTxtFeild.setText("0");
-        hotTxtFeild.setText("0");
+        friesTxtField.setText("0");
+        burgerTxtField.setText("0");
+        hotTxtField.setText("0");
         
         //Reseting lables
-        tax.setText("Tax: ");
+        taxLbl.setText("Tax: ");
         priceBefore.setText("Price Before Tax: ");
-        total.setText("Total ");
+        totalLbl.setText("Total ");
         savingsLbl.setText("Savings: ");
     }//GEN-LAST:event_resetBtnActionPerformed
 
     private void sandwichTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sandwichTxtFieldMousePressed
         sandwichTxtField.setText("");
     }//GEN-LAST:event_sandwichTxtFieldMousePressed
+
+    private void sandwichTxtFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sandwichTxtFieldMouseExited
+       
+    }//GEN-LAST:event_sandwichTxtFieldMouseExited
+
+    private void sandwichTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_sandwichTxtFieldFocusLost
+        sandwichTxtField.setText("0");
+    }//GEN-LAST:event_sandwichTxtFieldFocusLost
+
+    private void fingerTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fingerTxtFieldMousePressed
+        fingerTxtField.setText("");
+    }//GEN-LAST:event_fingerTxtFieldMousePressed
+
+    private void fingerTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fingerTxtFieldFocusLost
+        fingerTxtField.setText("0");
+    }//GEN-LAST:event_fingerTxtFieldFocusLost
+
+    private void wingsTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_wingsTxtFieldMousePressed
+        wingsTxtField.setText("");
+    }//GEN-LAST:event_wingsTxtFieldMousePressed
+
+    private void wingsTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wingsTxtFieldFocusLost
+        wingsTxtField.setText("0");
+    }//GEN-LAST:event_wingsTxtFieldFocusLost
+
+    private void stirTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stirTxtFieldMousePressed
+        stirTxtField.setText("");
+    }//GEN-LAST:event_stirTxtFieldMousePressed
+
+    private void stirTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stirTxtFieldFocusLost
+        stirTxtField.setText("0");
+    }//GEN-LAST:event_stirTxtFieldFocusLost
+
+    private void BBQWingsTxtFeildMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BBQWingsTxtFeildMousePressed
+        BBQWingsTxtFeild.setText("");
+    }//GEN-LAST:event_BBQWingsTxtFeildMousePressed
+
+    private void BBQWingsTxtFeildFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_BBQWingsTxtFeildFocusLost
+        BBQWingsTxtFeild.setText("0");
+    }//GEN-LAST:event_BBQWingsTxtFeildFocusLost
+
+    private void friesTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_friesTxtFieldMousePressed
+        friesTxtField.setText("");
+    }//GEN-LAST:event_friesTxtFieldMousePressed
+
+    private void friesTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_friesTxtFieldFocusLost
+        friesTxtField.setText("0");
+    }//GEN-LAST:event_friesTxtFieldFocusLost
+
+    private void burgerTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_burgerTxtFieldMousePressed
+        burgerTxtField.setText("");
+    }//GEN-LAST:event_burgerTxtFieldMousePressed
+
+    private void burgerTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_burgerTxtFieldFocusLost
+        burgerTxtField.setText("0");
+    }//GEN-LAST:event_burgerTxtFieldFocusLost
+
+    private void hotTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hotTxtFieldMousePressed
+        hotTxtField.setText("");
+    }//GEN-LAST:event_hotTxtFieldMousePressed
+
+    private void hotTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_hotTxtFieldFocusLost
+        hotTxtField.setText("0");
+    }//GEN-LAST:event_hotTxtFieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -406,16 +548,16 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     private javax.swing.JPanel backingPnl;
     private javax.swing.JLabel bbqWingLbl;
     private javax.swing.JLabel burgerLbl;
-    private javax.swing.JTextField burgerTxtFeild;
+    private javax.swing.JTextField burgerTxtField;
     private javax.swing.JButton calculateBtn;
     private javax.swing.JLabel dealLbl;
     private javax.swing.JButton exitBtn;
     private javax.swing.JLabel fingerLbl;
-    private javax.swing.JTextField fingerTxtFeild;
+    private javax.swing.JTextField fingerTxtField;
     private javax.swing.JLabel friLbl;
-    private javax.swing.JTextField friesTxtFeild;
+    private javax.swing.JTextField friesTxtField;
     private javax.swing.JLabel hotLbl;
-    private javax.swing.JTextField hotTxtFeild;
+    private javax.swing.JTextField hotTxtField;
     private javax.swing.JLabel instuctionsLbl;
     private javax.swing.JLabel priceBefore;
     private javax.swing.JButton resetBtn;
@@ -424,11 +566,11 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     private javax.swing.JLabel savingsLbl;
     private javax.swing.JLabel sloganLbl;
     private javax.swing.JLabel stirLbl;
-    private javax.swing.JTextField stirTxtFeild;
-    private javax.swing.JLabel tax;
+    private javax.swing.JTextField stirTxtField;
+    private javax.swing.JLabel taxLbl;
     private javax.swing.JLabel titleLbl;
-    private javax.swing.JLabel total;
+    private javax.swing.JLabel totalLbl;
     private javax.swing.JLabel wingLbl;
-    private javax.swing.JTextField wingsTxtFeild;
+    private javax.swing.JTextField wingsTxtField;
     // End of variables declaration//GEN-END:variables
 }
