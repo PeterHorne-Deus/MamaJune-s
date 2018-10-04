@@ -15,7 +15,8 @@ import java.text.*;
 
 public class MamaJunesChicken extends javax.swing.JFrame {
     // Globally declared variables...
-
+        int numSandwich,numFingers,numWings,numStirfry,numBBQ,numFries,numBurgers,numHot;
+        double before,withTax,cost,saving;
     
     
     public MamaJunesChicken() {
@@ -360,9 +361,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
         //Creating a decimal format
         DecimalFormat money = new DecimalFormat("$###,###.##");
         
-        //Creating Variables
-        int numSandwich,numFingers,numWings,numStirfry,numBBQ,numFries,numBurgers,numHot;
-        double before,withTax,cost,saving;
+       
        
         //Creating constents
         final double TAX = 0.13;
@@ -441,7 +440,7 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     }//GEN-LAST:event_resetBtnActionPerformed
 
     private void sandwichTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sandwichTxtFieldMousePressed
-        sandwichTxtField.setText("");
+       // sandwichTxtField.setText("");
     }//GEN-LAST:event_sandwichTxtFieldMousePressed
 
     private void sandwichTxtFieldMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sandwichTxtFieldMouseExited
@@ -449,63 +448,63 @@ public class MamaJunesChicken extends javax.swing.JFrame {
     }//GEN-LAST:event_sandwichTxtFieldMouseExited
 
     private void sandwichTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_sandwichTxtFieldFocusLost
-        sandwichTxtField.setText("0");
+       // sandwichTxtField.setText("0");
     }//GEN-LAST:event_sandwichTxtFieldFocusLost
 
     private void fingerTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fingerTxtFieldMousePressed
-        fingerTxtField.setText("");
+        //fingerTxtField.setText("");
     }//GEN-LAST:event_fingerTxtFieldMousePressed
 
     private void fingerTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fingerTxtFieldFocusLost
-        fingerTxtField.setText("0");
+        //fingerTxtField.setText("0");
     }//GEN-LAST:event_fingerTxtFieldFocusLost
 
     private void wingsTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_wingsTxtFieldMousePressed
-        wingsTxtField.setText("");
+        //wingsTxtField.setText("");
     }//GEN-LAST:event_wingsTxtFieldMousePressed
 
     private void wingsTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_wingsTxtFieldFocusLost
-        wingsTxtField.setText("0");
+        //wingsTxtField.setText("0");
     }//GEN-LAST:event_wingsTxtFieldFocusLost
 
     private void stirTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stirTxtFieldMousePressed
-        stirTxtField.setText("");
+        //stirTxtField.setText("");
     }//GEN-LAST:event_stirTxtFieldMousePressed
 
     private void stirTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_stirTxtFieldFocusLost
-        stirTxtField.setText("0");
+       // stirTxtField.setText("0");
     }//GEN-LAST:event_stirTxtFieldFocusLost
 
     private void BBQWingsTxtFeildMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BBQWingsTxtFeildMousePressed
-        BBQWingsTxtFeild.setText("");
+       // BBQWingsTxtFeild.setText("");
     }//GEN-LAST:event_BBQWingsTxtFeildMousePressed
 
     private void BBQWingsTxtFeildFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_BBQWingsTxtFeildFocusLost
-        BBQWingsTxtFeild.setText("0");
+       // BBQWingsTxtFeild.setText("0");
     }//GEN-LAST:event_BBQWingsTxtFeildFocusLost
 
     private void friesTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_friesTxtFieldMousePressed
-        friesTxtField.setText("");
+       // friesTxtField.setText("");
     }//GEN-LAST:event_friesTxtFieldMousePressed
 
     private void friesTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_friesTxtFieldFocusLost
-        friesTxtField.setText("0");
+       // friesTxtField.setText("0");
     }//GEN-LAST:event_friesTxtFieldFocusLost
 
     private void burgerTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_burgerTxtFieldMousePressed
-        burgerTxtField.setText("");
+       // burgerTxtField.setText("");
     }//GEN-LAST:event_burgerTxtFieldMousePressed
 
     private void burgerTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_burgerTxtFieldFocusLost
-        burgerTxtField.setText("0");
+        //burgerTxtField.setText("0");
     }//GEN-LAST:event_burgerTxtFieldFocusLost
 
     private void hotTxtFieldMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hotTxtFieldMousePressed
-        hotTxtField.setText("");
+        //hotTxtField.setText("");
     }//GEN-LAST:event_hotTxtFieldMousePressed
 
     private void hotTxtFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_hotTxtFieldFocusLost
-        hotTxtField.setText("0");
+        //hotTxtField.setText("0");
     }//GEN-LAST:event_hotTxtFieldFocusLost
 
     /**
